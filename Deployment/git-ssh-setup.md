@@ -28,14 +28,18 @@ Download the official installer from git-scm.com.
 
 4. Complete the installation and verify by running:
 
+```powershell
     git --version
+```
 
 ## 5. Configure Global User Identity
 
 Set your identity so your commits are correctly attributed to you.
 
+```powershell
 git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
+```
 
 ## 6. Generate and Add SSH Keys
 
@@ -44,7 +48,9 @@ Using SSH keys is more secure than using HTTPS with passwords.
 Step 1: Generate the key
 Open PowerShell and run:
 
+```powershell
 ssh-keygen -t ed25519 -C "your-email@example.com"
+```
 
 Press Enter to save in the default location and skip the passphrase for now.
 

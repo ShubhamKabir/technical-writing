@@ -32,8 +32,10 @@ This guide is for Python developers who want to move beyond basic scripts and bu
 
 4. Verify the installation:
 
+```powershell
     python --version
     pip --version
+```
 
 ## 6. Configure Virtual Environments (venv)
 
@@ -41,17 +43,20 @@ Directly installing libraries into your global Python folder causes version conf
 
 Step 1: Create a project directory
 
+```powershell
 mkdir my-python-project
 cd my-python-project
-
+```
 Step 2: Create the environment
 
+```powershell
 python -m venv venv
-
+```
 Step 3: Activate the environment
 
+```powershell
 .\venv\Scripts\activate
-
+```
 Your terminal should now show (venv) before the command prompt.
 
 ## 7. Manage Dependencies with Pip

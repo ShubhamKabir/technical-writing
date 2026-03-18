@@ -19,8 +19,10 @@ Solution:
 
 3. Stage and commit:
 
+```powershell
     git add [filename]
     git commit -m "Resolved merge conflict"
+```
 
 Error 2: Authentication Failed (Incorrect Credentials)
 
@@ -28,22 +30,23 @@ Problem: fatal: Authentication failed for 'https://github.com/...'.
 Cause: Cached credentials in Windows are outdated or incorrect.
 Solution:
 
-    Search for "Credential Manager" in Windows Start.
+1. Search for "Credential Manager" in Windows Start.
 
-    Go to Windows Credentials.
+2. Go to Windows Credentials.
 
-    Find the GitHub/GitLab entry and Remove or Edit it to use your current Personal Access Token (PAT).
+3. Find the GitHub/GitLab entry and Remove or Edit it to use your current Personal Access Token (PAT).
 
 Error 3: Accidental Commit to Wrong Branch
 
 Problem: You committed code to main instead of a feature branch.
 Solution:
-PowerShell
 
+```powershell
 git reset --soft HEAD~1  # Undoes the commit but keeps your code changes
 git checkout -b feature-branch
 git add .
 git commit -m "Moving work to the correct branch"
+```
 
 ## Conclusion
 

@@ -66,4 +66,4 @@ Once the environment is active, use pip to install packages locally to that proj
 
 ## 8. Conclusion
 
-A properly configured Git and Python environment prevents "it works on my machine" errors. By using SSH for security and Virtual Environments for project isolation, you ensure your development workflow is professional and scalable.
+Setting up a dedicated environment for Python on Windows ensures that your development workflow remains organized and scalable. By utilizing virtual environments and requirements files, you protect your system-wide Python installation and make it easy for others to reproduce your work without dependency errors.
