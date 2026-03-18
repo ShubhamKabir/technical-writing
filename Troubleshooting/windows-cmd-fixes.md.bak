@@ -14,11 +14,11 @@ Problem: 'python', 'git', or 'node' is not recognized as an internal or external
 Cause: The software is installed, but its folder path is not in the Windows System Environment Variables (PATH).
 Solution:
 
-* Search for "Edit the system environment variables".
+    Search for "Edit the system environment variables".
 
-* Click Environment Variables > Select Path > Edit.
+    Click Environment Variables > Select Path > Edit.
 
-* Add the path to your software's bin folder (e.g., C:\Program Files\nodejs\).
+    Add the path to your software's bin folder (e.g., C:\Program Files\nodejs\).
 
 Error 2: Access is Denied
 
@@ -34,12 +34,11 @@ Problem: Navigating to a folder using cd fails even though the folder exists.
 Cause: The folder name likely contains spaces, and the path was not enclosed in quotes.
 Solution:
 
-```powershell
 # Incorrect
 cd C:\Users\My Documents\Project
 # Correct
 cd "C:\Users\My Documents\Project"
-```
+
 ## Conclusion
 
 Resolving CMD errors typically involves verifying system permissions or ensuring the OS knows where to find your executables. By maintaining a clean System PATH and understanding when to use administrative elevation, you can prevent most common command-line interruptions and ensure your automation scripts run reliably.

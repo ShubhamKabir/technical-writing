@@ -55,3 +55,7 @@ cat ~/.ssh/id_ed25519.pub | clip
 
 Step 3: Add to GitHub/GitLab
 Navigate to your account Settings > SSH and GPG keys > New SSH Key and paste the copied text.
+
+## 7. Conclusion
+
+By configuring Git and SSH keys, you have established a secure and efficient workflow on Windows. This setup not only protects your credentials through key-based authentication but also streamlines your development process by removing the need for repetitive manual logins during every push or pull operation.

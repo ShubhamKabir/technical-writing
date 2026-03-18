@@ -16,36 +16,33 @@ This document is for beginners and developers setting up a new Windows workstati
 
 * A GitHub, GitLab, or Bitbucket account.
 
-### 4. Install Git for Windows
+## 4. Install Git for Windows
 
 Download the official installer from git-scm.com.
 
-* 1 Run the .exe installer.
+1. Run the .exe installer.
 
-* 2 Select "Git Bash" during the component selection (this provides a Linux-like terminal).
+2. Select "Git Bash" during the component selection (this provides a Linux-like terminal).
 
-* 3 Choose "Use Git from the Windows Command Prompt" to ensure Git is added to your system PATH.
+3. Choose "Use Git from the Windows Command Prompt" to ensure Git is added to your system PATH.
 
-* 4 Complete the installation and verify by running:
-    PowerShell
+4. Complete the installation and verify by running:
 
     git --version
 
-5. Configure Global User Identity
+## 5. Configure Global User Identity
 
 Set your identity so your commits are correctly attributed to you.
-PowerShell
 
 git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
 
-6. Generate and Add SSH Keys
+## 6. Generate and Add SSH Keys
 
 Using SSH keys is more secure than using HTTPS with passwords.
 
 Step 1: Generate the key
 Open PowerShell and run:
-PowerShell
 
 ssh-keygen -t ed25519 -C "your-email@example.com"
 
@@ -53,7 +50,6 @@ Press Enter to save in the default location and skip the passphrase for now.
 
 Step 2: Copy the Public Key
 Copy the content of your public key to your clipboard:
-PowerShell
 
 cat ~/.ssh/id_ed25519.pub | clip
 
