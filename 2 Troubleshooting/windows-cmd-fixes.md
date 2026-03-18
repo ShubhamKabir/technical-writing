@@ -1,0 +1,42 @@
+Common Windows Command Prompt (CMD) Errors
+Overview
+
+Command Prompt remains a staple for Windows administration, but syntax nuances and permission restrictions frequently cause failures.
+Audience
+
+IT Professionals and Windows users executing administrative scripts or environment setups.
+Error 1: 'Command' is not recognized
+
+Problem: 'python', 'git', or 'node' is not recognized as an internal or external command.
+Cause: The software is installed, but its folder path is not in the Windows System Environment Variables (PATH).
+Solution:
+
+    Search for "Edit the system environment variables".
+
+    Click Environment Variables > Select Path > Edit.
+
+    Add the path to your software's bin folder (e.g., C:\Program Files\nodejs\).
+
+Error 2: Access is Denied
+
+Problem: Commands like net stop or directory modifications fail with a permission error.
+Cause: The command requires elevated administrative privileges.
+Solution:
+
+    Close the terminal and Right-click CMD > Select "Run as Administrator".
+
+Error 3: The system cannot find the path specified
+
+Problem: Navigating to a folder using cd fails even though the folder exists.
+Cause: The folder name likely contains spaces, and the path was not enclosed in quotes.
+Solution:
+PowerShell
+
+# Incorrect
+cd C:\Users\My Documents\Project
+# Correct
+cd "C:\Users\My Documents\Project"
+
+Conclusion
+
+Most Windows and Git errors are caused by incorrect environment paths or permission levels. By following these diagnostic commands, you can resolve the majority of "blocked" states without needing a full system reinstall.

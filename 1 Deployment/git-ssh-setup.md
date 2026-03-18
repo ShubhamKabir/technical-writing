@@ -1,0 +1,61 @@
+# How to Set Up Git and SSH on Windows
+
+## 1. Overview
+
+Git is the industry-standard version control system, while SSH (Secure Shell) provides a secure method for authenticating with remote repositories like GitHub or GitLab. This guide outlines the installation of Git for Windows and the generation of SSH keys to eliminate the need for entering passwords during every code push.
+
+## 2. Audience
+
+This document is for beginners and developers setting up a new Windows workstation. Basic familiarity with the Windows Command Prompt or PowerShell is recommended.
+
+## 3. Prerequisites
+
+* A Windows 10 or 11 operating system.
+
+* Administrative privileges to install software.
+
+* A GitHub, GitLab, or Bitbucket account.
+
+### 4. Install Git for Windows
+
+Download the official installer from git-scm.com.
+
+    Run the .exe installer.
+
+    Select "Git Bash" during the component selection (this provides a Linux-like terminal).
+
+    Choose "Use Git from the Windows Command Prompt" to ensure Git is added to your system PATH.
+
+    Complete the installation and verify by running:
+    PowerShell
+
+    git --version
+
+5. Configure Global User Identity
+
+Set your identity so your commits are correctly attributed to you.
+PowerShell
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+6. Generate and Add SSH Keys
+
+Using SSH keys is more secure than using HTTPS with passwords.
+
+Step 1: Generate the key
+Open PowerShell and run:
+PowerShell
+
+ssh-keygen -t ed25519 -C "your-email@example.com"
+
+Press Enter to save in the default location and skip the passphrase for now.
+
+Step 2: Copy the Public Key
+Copy the content of your public key to your clipboard:
+PowerShell
+
+cat ~/.ssh/id_ed25519.pub | clip
+
+Step 3: Add to GitHub/GitLab
+Navigate to your account Settings > SSH and GPG keys > New SSH Key and paste the copied text.

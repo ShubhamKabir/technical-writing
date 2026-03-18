@@ -1,0 +1,45 @@
+Common Git Errors and Solutions
+Overview
+
+Git is a powerful tool, but its complex command structure often leads to workflow interruptions. This guide provides immediate solutions for resolving sync conflicts, accidental commits, and local repository mismatches.
+Audience
+
+This document is for developers who are comfortable with basic Git commands but encounter friction during collaboration or branching.
+Error 1: Merge Conflicts
+
+Problem: Git prevents a merge because the same line of code was modified in two different branches.
+Cause: Concurrent edits on the same file in different branches.
+Solution:
+
+    Open the conflicted file and look for <<<<<<< HEAD markers.
+
+    Manually choose which code to keep and delete the markers.
+
+    Stage and commit:
+    PowerShell
+
+    git add [filename]
+    git commit -m "Resolved merge conflict"
+
+Error 2: Authentication Failed (Incorrect Credentials)
+
+Problem: fatal: Authentication failed for 'https://github.com/...'.
+Cause: Cached credentials in Windows are outdated or incorrect.
+Solution:
+
+    Search for "Credential Manager" in Windows Start.
+
+    Go to Windows Credentials.
+
+    Find the GitHub/GitLab entry and Remove or Edit it to use your current Personal Access Token (PAT).
+
+Error 3: Accidental Commit to Wrong Branch
+
+Problem: You committed code to main instead of a feature branch.
+Solution:
+PowerShell
+
+git reset --soft HEAD~1  # Undoes the commit but keeps your code changes
+git checkout -b feature-branch
+git add .
+git commit -m "Moving work to the correct branch"
