@@ -22,11 +22,11 @@ Download the official installer from git-scm.com.
 
 * 1 Run the .exe installer.
 
-* 2 Select "Git Bash" during the component selection (this provides a Linux-like terminal).
+    Select "Git Bash" during the component selection (this provides a Linux-like terminal).
 
-* 3 Choose "Use Git from the Windows Command Prompt" to ensure Git is added to your system PATH.
+    Choose "Use Git from the Windows Command Prompt" to ensure Git is added to your system PATH.
 
-* 4 Complete the installation and verify by running:
+    Complete the installation and verify by running:
     PowerShell
 
     git --version
